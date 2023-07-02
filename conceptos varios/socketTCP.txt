@@ -1,0 +1,86 @@
+Un socket TCP (Transmission Control Protocol) es una abstracción de programación que permite establecer
+una comunicación de red utilizando el protocolo TCP. 
+
+TCP es un protocolo de transporte confiable y orientado a la conexión, que garantiza la entrega 
+ordenada y sin errores de datos entre dos puntos en una red.
+
+Un socket TCP proporciona una interfaz para crear, conectar, enviar y recibir datos a través de una 
+conexión TCP. 
+Esencialmente, actúa como un punto final de una conexión TCP y permite la transmisión 
+bidireccional de datos entre un cliente y un servidor.
+Cuando se crea un socket TCP, se especifica el dominio de dirección y el tipo de socket. 
+
+En el caso de Python, se utiliza la función socket.socket() para crear un socket TCP. 
+Por ejemplo:
+
+import socket
+
+# Crear un socket TCP
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+En este ejemplo, AF_INET indica que se utilizará el protocolo IPv4 y SOCK_STREAM especifica que se 
+creará un socket TCP.
+
+Una vez creado el socket, se puede utilizar el método connect() para establecer una conexión TCP 
+con un servidor remoto:
+
+# Conectar al servidor
+sock.connect((host, port))
+
+
+Un socket TCP (Transmission Control Protocol) es una abstracción de programación que permite establecer una comunicación de red utilizando el protocolo TCP. TCP es un protocolo de transporte confiable y orientado a la conexión, que garantiza la entrega ordenada y sin errores de datos entre dos puntos en una red.
+
+Un socket TCP proporciona una interfaz para crear, conectar, enviar y recibir datos a través de una conexión TCP. Esencialmente, actúa como un punto final de una conexión TCP y permite la transmisión bidireccional de datos entre un cliente y un servidor.
+
+Cuando se crea un socket TCP, se especifica el dominio de dirección y el tipo de socket. En el caso de Python, se utiliza la función socket.socket() para crear un socket TCP. Por ejemplo:
+
+python
+Copy code
+import socket
+
+# Crear un socket TCP
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+En este ejemplo, AF_INET indica que se utilizará el protocolo IPv4 y SOCK_STREAM especifica que se creará un socket TCP.
+
+Una vez creado el socket, se puede utilizar el método connect() para establecer una conexión TCP con un servidor remoto:
+
+python
+Copy code
+# Conectar al servidor
+sock.connect((host, port))
+
+
+Aquí, host y port son la dirección IP o el nombre del host y el puerto del servidor al que se desea 
+conectar.
+
+Una vez establecida la conexión, se pueden utilizar los métodos send() y recv() del socket para 
+enviar y recibir datos a través de la conexión TCP.
+
+En resumen, un socket TCP es una abstracción de programación que permite establecer y utilizar 
+conexiones TCP en aplicaciones de red. 
+Proporciona una interfaz para la creación, conexión, envío y recepción de datos a través del 
+protocolo TCP.
+
+Además de los sockets TCP, existen otros tipos de sockets que se pueden utilizar para diferentes 
+propósitos en la programación de redes. 
+Algunos de los tipos de sockets más comunes son:
+
+1. Socket UDP (User Datagram Protocol): El UDP es un protocolo de transporte sin conexión y no 
+confiable. Los sockets UDP, creados utilizando `socket.SOCK_DGRAM`, se utilizan para enviar y 
+recibir datagramas UDP.
+
+2. Socket de flujo bruto (Raw Sockets): Los sockets de flujo bruto, creados utilizando 
+`socket.SOCK_RAW`, permiten el acceso directo a los paquetes de red en un nivel inferior. 
+Con ellos, se puede construir y analizar paquetes personalizados utilizando protocolos de red 
+específicos, como IP, ICMP o UDP.
+
+3. Socket Unix: Los sockets Unix, creados utilizando `socket.SOCK_STREAM` o `socket.SOCK_DGRAM` en 
+combinación con `socket.AF_UNIX`, son utilizados para la comunicación entre procesos en un mismo 
+sistema operativo utilizando rutas de archivo Unix en lugar de direcciones IP y puertos.
+
+Estos son solo algunos ejemplos de los tipos de sockets más utilizados en la programación de redes. 
+Cada tipo de socket tiene sus propias características y se adapta a diferentes necesidades y 
+casos de uso específicos. 
+Al elegir un tipo de socket, es importante considerar los requisitos y las características 
+particulares de la aplicación o protocolo de red con el que estés trabajando.
+
