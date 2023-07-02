@@ -1,7 +1,7 @@
 import http.client
 
 # Establecer los detalles de la solicitud
-host = 'api.example.com'
+host = 'https://pokeapi.co/api/v2/pokemon/ditto'
 path = '/'
 
 # Crear una conexión HTTP
