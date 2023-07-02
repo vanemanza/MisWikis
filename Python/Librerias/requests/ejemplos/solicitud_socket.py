@@ -1,9 +1,9 @@
 import socket
 
 # Definir los detalles de la solicitud
-host = 'api.example.com'
+host = 'api/v2/pokemon/ditto'
 port = 80
-path = '/'
+path = 'https://pokeapi.co/'
 
 # Crear un socket TCP
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
