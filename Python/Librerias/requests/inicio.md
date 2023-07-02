@@ -26,7 +26,7 @@ response = requests.options('https://httpbin.org/get')
 A veces necesitamos enviar datos en la URL, si se hiciera en forma manual deberíamos pasar estos 
 datos como pares clave/valor después de un signo de interrogación:
 
-    [http://example.com/path?param1=value1&param2=value2]
+    http://example.com/path?param1=value1&param2=value2
 
 Pero con requests se pueden enviar parametros de forma muy simple, como un diccionario, usando el
 argumento "params":
@@ -54,7 +54,8 @@ __Atributos más usados de la clase Response:__
      Se puede verificar la codificación --> r.encoding
                                             'utf-8'
      y cambiar a otra --> r.encoding = 'ISO-8859-1'
-    - content: si se determina el tipo de codificación en el doc HTML o XML, debemos usar --> r.content para encontrar la codificación y luego poder cambiarla, en caso de ser necesario con r.encoding
+    - content: si se determina el tipo de codificación en el doc HTML o XML, debemos usar --> 
+    r.content para encontrar la codificación y luego poder cambiarla, en caso de ser necesario con    r.encoding
        
 __Métodos de la clase Response:__
 
