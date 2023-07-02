@@ -1,6 +1,7 @@
 import requests
 
-r = requests.get('https://pokeapi.co/api/v2/pokemon/ditto')
+r = requests.get('https://api.github.com/events')
+#r = requests.get('https://pokeapi.co/api/v2/pokemon/ditto')
 # print(response.status_code)  # Imprime el código de estado de la respuesta
 # print(response.text)  # Imprime el contenido de la respuesta en formato de texto
 
